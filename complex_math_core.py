@@ -175,7 +175,8 @@ class ComplexTensorEncoder:
         q, r = np.linalg.qr(matrix)
         # Ensure diagonal elements of R have positive phase
         d = np.diag(r)
-        ph = d / np.abs(d)
+        # Avoid division by zero
+        ph = d / (np.abs(d) + 1e-10)
         q = q @ np.diag(ph)
         
         return q

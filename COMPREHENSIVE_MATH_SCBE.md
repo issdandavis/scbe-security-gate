@@ -22,7 +22,7 @@ The Spectral Context-Bound Encryption (SCBE) Security Gate represents a novel ap
 
 SCBE is built on three foundational principles:
 
-1. **Spectral Decomposition**: Transform data into frequency domain where security properties are more analyzable
+1. **Spectral Decomposition**: Transform data into frequency domain where security properties are more easily analyzed
 2. **Context Binding**: Cryptographic operations depend on temporal, spatial, and emotional context vectors
 3. **Post-Quantum Resilience**: Use mathematical structures resistant to both classical and quantum attacks
 
@@ -186,7 +186,7 @@ def FHT(x):
                 a, b = x[j], x[j+h]
                 x[j], x[j+h] = a+b, a-b
         h *= 2
-    return x / sqrt(n)
+    return x / np.sqrt(n)
 ```
 
 **Complexity:** O(n log n) operations
